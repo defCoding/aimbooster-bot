@@ -54,6 +54,7 @@ if __name__ == '__main__':
     clear_term()
     print('The bounds have been saved. Before we continue, make sure that the game can be completely seen on your screen.')
     print('You can stop the script at any time by pressing \'q\' on your keyboard.')
+    print('Start the game first, and then bring the focus back to the terminal to start the script.')
     input('Press Enter in the terminal to start the script...')
     print('Script started.')
 
