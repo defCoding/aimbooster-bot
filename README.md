@@ -40,6 +40,8 @@ Instead, I wrote up a simple KD-Tree implementation in `kdtree.py`, and clicked 
 
 
 ## How to Use
+Because this script uses `pywin32`, this will only work on Windows.
+
 You will need to have `pip` installed. [Instructions here.](https://pip.pypa.io/en/stable/installing/)
 
 Run `pip install -r requirements.txt` while in the cloned repository to install the required libraries.
