@@ -1,4 +1,5 @@
 class EmptyKDNode:
+    """Empty KDTree node."""
     def insert(self, new_data):
         return KDNode(new_data)
 
@@ -8,6 +9,7 @@ class EmptyKDNode:
 empty = EmptyKDNode()
 
 class KDNode:
+    """A KDTree node. Has a left, right, and the axis in which it splits on."""
     def __init__(self, data, axis=0, left=empty, right=empty):
         self.data = data
         self.axis = axis
@@ -15,6 +17,7 @@ class KDNode:
         self.right = right
 
     def insert(self, new_data):
+        """Insert a node into the KDTree."""
         self.check_dimensionality(new_data)
 
         if new_data[self.axis] < self.data[self.axis]:
@@ -27,6 +30,7 @@ class KDNode:
             return KDNode(self.data, self.axis, self.left, new_right)
 
     def exists(self, query, tolerance=0):
+        """Checks if a given node exists in the KDTree (within a certain tolerance)."""
         self.check_dimensionality(query)
         distance = self.get_distance(query)
         
@@ -40,10 +44,12 @@ class KDNode:
 
 
     def check_dimensionality(self, point):
+        """Double checks that the dimensionality of the point matches this node."""
         if len(point) != len(self.data):
             raise Exception('Dimensionality of data does not match KDTree dimension.')
 
     def get_distance(self, point):
+        """Gets the Euclidean distance between the point and the data stored in this node."""
         self.check_dimensionality(point)
         distance = 0
 
