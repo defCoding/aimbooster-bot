@@ -48,4 +48,5 @@ Then run `python bot.py` and follow the instructions in the terminal. Please not
 
 
 ## Preview
+The bot can play up to ~18 targets/sec. The preview shows 15 targets/sec.
 ![Preview](https://i.imgur.com/iXsEdFA.gif)
