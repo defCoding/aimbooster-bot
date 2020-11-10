@@ -1,5 +1,5 @@
 # Aimbooster Bot
-A bot that beats the classic gamemode on https://aimbooster.com.
+A bot that beats the classic gamemode on http://aimbooster.com.
 
 ## Context
 I've always wanted to make a script that could actually play a game on some external website, so this was a fun experience of using `pyautogui` and `pywin32` to take control of my mouse. The program takes a screenshot of the game area established by the user, and then searches that screenshot for pixels that match the color of the bullseye. If it sees it, it clicks at that location. To speed up the program, the script only checks every 5 pixels, as there isn't really a need to check every pixel.
